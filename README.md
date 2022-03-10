@@ -1,1 +1,1 @@
-A simple chat server and client built with grpc
+A simple chat server and client working with grpcJS
