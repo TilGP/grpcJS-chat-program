@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+service Chat {
+    rpc createChannel(Channel) returns (Message) {}
+    rpc getAllChannels(Empty) returns (ChannelList) {}
+    rpc join(Channel) returns (stream Message) {}
+    rpc send(Message) returns (Message) {}
+}
+
+message Empty {}
+
+message Channel {
+    string channelName = 1;
+}
+
+message ChannelList {
+    repeated string channelName = 1;
+}
+
+message Message {
+    string user = 1;
+    string channel = 2;
+    string text = 3;
+}

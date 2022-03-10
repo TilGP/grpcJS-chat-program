@@ -1,0 +1,1 @@
+A simple chat server and client built with grpc
